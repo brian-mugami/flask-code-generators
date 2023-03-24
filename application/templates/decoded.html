@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+
+{%block title%} Decoded {%endblock%}
+
+{%block content%}
+
+<center>
+    <h1>This is your info:</h1>
+    <div>
+        <strong>Decoded</strong>
+        <ol>
+        {%for i in info%}
+            <li><strong>{{i}}</strong></li>
+        {% endfor %}
+        </ol>
+    </div>
+    <br>
+    <div>
+    </div>
+</center>
+
+{%endblock%}

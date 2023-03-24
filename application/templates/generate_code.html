@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+
+{%block title%} Code Generator {%endblock%}
+
+{%block content%}
+
+<h1>{{title}}</h1>
+<br><br>
+<center>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+        <form method="post">
+        {{form.csrf_token}}
+            <strong>{{form.convert.label(class="form-control-label")}}</strong>
+        {{form.convert(class="form-control form-control-sm is-valid")}}
+            <br><br>
+        {{form.submit(class="btn btn-outline-danger")}}
+        {% if form.data.errors%}
+        {% for error in form.convert.errors%}
+        <div>{{error}}</div>
+        {%endfor%}
+        {%endif%}
+    </form>
+  </div>
+</div>
+</center>
+
+
+
+{%endblock%}

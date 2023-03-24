@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+
+{%block title%} Home {%endblock%}
+
+{%block content%}
+
+<center>
+    <h1>Welcome</h1>
+    <div>
+        <a href="{{url_for('routes.generate')}}">
+            <button class="btn btn-secondary">QR Code Generator</button>
+        </a>
+    </div>
+    <br>
+    <div>
+    <a href="{{url_for('routes.upload')}}">
+        <button class="btn btn-secondary">QR Code Scanner</button>
+    </a>
+    </div>
+</center>
+
+{%endblock%}

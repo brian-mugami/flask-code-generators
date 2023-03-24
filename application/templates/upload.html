@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+{%block title%} QR Decode  {%endblock%}
+
+{%block content%}
+
+<center>
+    <div class="justify-content-center">
+        <h4>Drop QR Image here to decode:</h4>
+
+    {{dropzone.create(action='routes.upload')}}
+    {{ dropzone.config(max_files=10, timeout=10000, default_message='Drop here!') }}
+    </div>
+</center>
+
+{%endblock%}

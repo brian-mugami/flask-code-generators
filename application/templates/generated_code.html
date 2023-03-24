@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+
+{%block title%} Code Generator {%endblock%}
+
+{%block content%}
+
+<h1>{{title}}</h1>
+<br><br>
+<center>
+<h3>success</h3>
+<div class="card" style="width: 18rem;">
+  <img src="{{url_for('static', filename=image)}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Generated Code</h5>
+    <a href="{{url_for('routes.generate')}}" class="btn btn-primary">Generate Another One</a>
+      <br><br>
+    <a href="{{url_for('routes.upload')}}" class="btn btn-warning">Scan QR</a>
+  </div>
+</div>
+</center>
+
+
+{%endblock%}
